@@ -164,6 +164,22 @@ python scripts/run_preprocess.py \
 
 Environment overrides: `FOMO300K_DATA_ROOT`, `FOMO300K_OUTPUT_ROOT`.
 
+## Push to GitHub
+
+This project is committed locally on branch `main`. To create the remote repo under [Akshatha-Mohan](https://github.com/Akshatha-Mohan) and push:
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+gh auth login -h github.com -p https -w   # one-time: approve in browser
+./scripts/setup_github.sh
+```
+
+That creates **https://github.com/Akshatha-Mohan/FOMO300K** (public) and pushes. Use a private repo instead:
+
+```bash
+gh repo create FOMO300K --private --source=. --remote=origin --push
+```
+
 ## Citation
 
 ```bibtex
